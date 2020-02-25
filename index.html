@@ -17,46 +17,46 @@
     <header>
     </header>
     <div class="container">
-    <form action="#" id="form">
-      <div class="row">
+    <form action="insert.php" method="POST" id="form">
+      <div class="row name__row">
         <label for="name">Name</label>
-        <input type="text" id="name" />
+        <input type="text" id="name" name="name"/>
       </div>
-      <div class="row">
+      <div class="row surname__row">
         <label for="surname">Surname</label>
         <input type="text" id="surname" />
       </div>
-      <div class="row">
+      <div class="row email__row">
         <label for="email">Email</label>
         <input type="text" id="email" />
       </div>
-      <div class="row">
+      <div class="row telephone__row">
         <label for="telephone">Telephone</label>
         <div class="telephoneInputs">
         <select selected="number" class="prefix">
           <option value="other">Other</option>
-          <option value="pl">+48</option>
-          <option value="en">+44</option>
-          <option value="de">+49</option>
-          <option value="usa">+1</option>
+          <option value="48">+48</option>
+          <option value="44">+44</option>
+          <option value="49">+49</option>
+          <option value="1">+1</option>
         </select>
-        <input type="text" class="telephone" />
+        <input type="number" class="telephone" />
       </div>
       </div>
-      <div class="row">
+      <div class="row birth__row">
         <label for="birth">Date of Birth</label>
         <input type="date" id="birth" />
       </div>
     
-      <div class="row">
+      <div class="row height__row">
         <label for="height">Height</label>
         <input type="number" id="height" />
       </div>
-      <div class="row">
+      <div class="row weight__row">
         <label for="weight">Weight</label>
         <input type="number" id="weight" />
       </div class="gender__flex">
-      <div class="row">
+      <div class="row gender__row">
         <span>Gender</span>
         <div class="gender">
           <label for="male">Male</label>
@@ -76,7 +76,7 @@
           <option value="usa">USA</option>
         </select>
       </div>
-      <div class="row">
+      <div class="row agree__row">
         <label class="agreeCheckbox" for="agree">
         <input class="input1" type="checkbox" name="checkbox" value="check" id="agree" /> 
         <p class="tekst1">I have read and agree to the Terms and Conditions and Privacy Policy</p>
@@ -94,6 +94,14 @@
       <div class="row row2">
         <p>Surname:</p>
         <p id="resultSurname"></p>
+      </div>
+      <div class="row row2">
+        <p>Email:</p>
+        <p id="resultEmail"></p>
+      </div>
+      <div class="row row2">
+        <p>Telephone:</p>
+        <p id="resultTelephone"></p>
       </div>
       <div class="row row2">
         <p>Date of Birth:</p>
@@ -125,6 +133,6 @@
       </div>
     </div>
   </div>
-    <script type="text/javascript" src="js/script.js"></script>
+    <!-- <script type="text/javascript" src="js/script.js"></script> -->
   </body>
 </html>
