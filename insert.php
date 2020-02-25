@@ -1,26 +1,33 @@
-<?php 
-$con = mysqli_connect('127.0.0.1','root','');
-
-if(!$con)
+<?php
+//require_once "connect.php"
+//$connection = @new mysqli($host, $db_user, $db_password, $db_name);
+//if($connection->connect_erno!=0)
+//{
+//    echo "Error: ".$connection->connect_erno . "Opis" . $connection->connect_error;
+//}
+//else
+//{
+//    $name = $_POST['name'];
+//    $surname = $_POST['surname'];
+//    echo 'It works!';
+ //   $connection->close();
+//}
+$host='localhost';
+$user='root';
+$pass='';
+$db='baza1';
+$con = mysqli_connect($host, $user, $pass, $db);
+if($con)
 {
-    echo 'Not connected To Server';
+    echo 'Successsss';
 }
-if(!mysqli_select_db($con, 'formdata'))
-
-$Name = $_POST['name'];
-$Surname = $_POST['surname'];
-
-$sql = "INSERT INTO data (Name, Surname) VALUES ('$Name','$Surname')";
-if(!mysqli_query($con,$sql))
-{
-    echo 'Not Inserte';
-}
-else
-{
-    echo 'Inserted';
-}
-
-header("refresh:2; url=index.html");
+$name = $_POST['name'];
+$surname = $_POST['surname'];
+$sql = "insert into tabela (Name, Surname) VALUES ('$name', '$surname')";
+$query=mysqli_query($con,$sql);
+if($query)
+    echo 'data inserted';
+header("refresh:8; url=index.html");
 
 ?>
 
