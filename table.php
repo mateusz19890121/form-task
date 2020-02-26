@@ -24,17 +24,18 @@ $sth->execute();
 
 /* Fetch all of the values of the first column */
 $result = $sth->fetchAll(PDO::FETCH_ASSOC);
-echo "<table>";
+
+echo "<table>"
+echo "<tr>
+        <td>Name</td> <td>Surname</td> <td>Email</td><td>Telephone</td><td>Date of birth</td><td>Height</td><td>Weight</td><td>Gender</td><td>Gender</td>
+     </tr>"
 foreach($result as $key => $row)
 {
-    
     echo "<tr>";
-    echo "<td>".$row['Name'] . ' ' . $row['Surname']. ' ' . $row['Email'] . ' ' . $row['Telephone'] . ' ' . $row['Date_of_Birth'] . ' ' . $row['Height'] . ' '. $row['Weight'] . ' ' . $row['Gender'] . ' '. $row['Country'] . ' ' ."</td>";
-    echo "<tr>";
-    
-
+    echo "'<td>'.$row['Name'].'</td>'. "<td>". $row['Surname'].'</td>'. '<td>' . $row['Email'] . '</td>' . '<td>' . $row['Telephone'] . '</td>'.'<td>'. $row['Date_of_Birth'] . '</td>' .'<td>' $row['Height'] .'</td>'.'<td>'. $row['Weight'] . '</td>' .'<td>' $row['Gender'] . '</td>'.'<td>'. $row['Country'] . '</td>'";
+    echo "</tr>";
 }
-echo "</table>";
+
    ​
 //    $result = $statement->fetchAll();
 
